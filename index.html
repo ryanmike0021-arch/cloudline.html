@@ -1,6 +1,19 @@
-http://localhost:26543/storage/emulated/0/CLOUDLINE+%281%29.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tl">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://mlobcizqdyqbqlyzocqw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_nz_MmnAMDH5Zwjtpet7HLQ_LACKS4TB";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+console.log("Cloudline connected to Supabase!");
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloudline</title>
