@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudline Dashboard</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fa;
+    color: #263445;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #102b46;
+    color: white;
+    padding: 25px 18px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logo span {
+    color: #39b6e9;
+}
+
+.menu a {
+    display: block;
+    color: #d5e1ec;
+    text-decoration: none;
+    padding: 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #1d4569;
+    color: white;
+}
+
+/* MAIN */
+.main {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 27px;
+}
+
+.header p {
+    color: #8995a3;
+    margin-top: 6px;
+}
+
+.profile {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.card h3 {
+    color: #8793a0;
+    font-size: 14px;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.card .icon {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+/* BUTTONS */
+.btn {
+    background: #087fc0;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #06669c;
+}
+
+.action {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 14px 10px;
+    border-bottom: 1px solid #edf0f3;
+    font-size: 14px;
+}
+
+th {
+    color: #8995a3;
+}
+
+.status {
+    background: #fff0cf;
+    color: #a36a00;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.delivered {
+    background: #d9f7e7;
+    color: #16844c;
+}
+
+.quick a {
+    display: block;
+    padding: 15px;
+    background: #f4f7fa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #263445;
+    text-decoration: none;
+}
+
+/* MOBILE */
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 10px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .panel {
+        overflow-x: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">CLOUDLINE</span></div>
+
+    <div class="menu">
+        <a href="dashboard.html">HOME</a>
+        <a href="innnnnn.html">Inventory</a>
+        <a href="pre orderrr.html">Upload Files</a>
+        <a href="Untitled-155.html">Pre-Orders</a>
+        <a href="#" class="active Untitled-15tyt.html">Attendance</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+    </div>
+</div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory System</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+.form input {
+    width: 100%;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.delete {
+    background: #dc2626;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #e2e8f0;
+}
+
+.summary {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+</style>
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance — Per Day</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+        h2 { text-align: center; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        select, input, button { margin: 5px 0; padding: 8px; width: 100%; max-width: 400px; }
+        button { background: #4530ff; color: white; border: none; cursor: pointer; font-weight: bold; margin-top: 8px; }
+        button:hover { background: #218838; }
+        button.del { background: #dc3545; padding: 4px 8px; font-size: 0.85rem; width: auto; }
+        label { display: inline-block; margin-top: 8px; font-weight: 600; }
+        
+        .week-group { margin-bottom: 25px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .week-header { background: #e9f5e9; padding: 10px 15px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        th { background: #f2f2f2; font-weight: bold; }
+        tr:last-child td { border-bottom: none; }
+        .empty { color: #888; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Attendance </h2>
+
+    <form>
+        <select id="empName">
+            <option value="">-- Pangalan --</option>
+            <option>Juan Dela Cruz</option>
+            <option>Maria Santos</option>
+            <option>Pedro Reyes</option>
+            <option>Ana Garcia</option>
+        </select>
+        <select id="empName1">
+            <option value="">-- Pwesto --</option>
+            <option>CLOUDLINE</option>
+            <option>ELYZ</option>
+            <option>SM</option>
+            <option>KYZEN</option>
+        </select>
+
+        <input type="date" id="payDate">
+
+        <button type="button" onclick="addRecord()">Pumasok</button>
+    </form>
+
+    <h3>Listahan</h3>
+    <div id="recordList"></div>
+
+<script>
+let records = JSON.parse(localStorage.getItem('attendanceDaily')) || [];
+renderList();
+
+function addRecord() {
+    const name = document.getElementById('empName').value;
+    const name1 = document.getElementById('empName1').value;
+    const date = document.getElementById('payDate').value;
+
+    if (!name) return alert('Pumili ng pangalan!');
+    if (!name1) return alert('Pumili ng pangalan!');
+    if (!date) return alert('Ilagay ang petsa!');
+
+    records.unshift({
+        id: Date.now(),
+        name,
+        name1,
+        date
+    });
+
+    saveAndSort();
+    renderList();
+
+    document.getElementById('empName').value = '';
+    document.getElementById('empName1').value = '';
+    document.getElementById('payDate').value = '';
+}
+
+function saveAndSort() {
+    records.sort((a, b) => new Date(b.date) - new Date(a.date));
+    localStorage.setItem('attendanceDaily', JSON.stringify(records));
+}
+
+function getWeekKey(dateStr) {
+    const d = new Date(dateStr);
+    const day = d.getDay();
+    const start = new Date(d);
+    start.setDate(d.getDate() - day);
+    const end = new Date(start);
+    end.setDate(start.getDate() + 6);
+    return {
+        key: start.toISOString().split('T')[0],
+        start: start,
+        end: end
+    };
+}
+
+function formatDate(dateObj) {
+    return dateObj.toLocaleDateString('tl-PH', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function renderList() {
+    const container = document.getElementById('recordList');
+    if (records.length === 0) {
+        container.innerHTML = '<p class="empty">Wala pang nakalagay na tala.</p>';
+        return;
+    }
+
+    const weeks = {};
+    records.forEach(rec => {
+        const wk = getWeekKey(rec.date);
+        if (!weeks[wk.key]) {
+            weeks[wk.key] = {
+                start: wk.start,
+                end: wk.end,
+                items: []
+            };
+        }
+        weeks[wk.key].items.push(rec);
+    });
+
+    container.innerHTML = '';
+    Object.keys(weeks).sort().reverse().forEach(weekKey => {
+        const w = weeks[weekKey];
+        container.innerHTML += `
+            <div class="week-group">
+                <div class="week-header"> ${formatDate(w.start)} — ${formatDate(w.end)}</div>
+                <table>
+                    <tr>
+                        <th>Pangalan</th>
+                        <th>Pwesto</th>
+                        <th>Petsa</th>
+                        <th></th>
+                    </tr>
+                    ${w.items.map(rec => `
+                        <tr>
+                            <td>${rec.name}</td>
+                            <td>${rec.name1}</td>
+                            <td>${formatDate(new Date(rec.date))}</td>
+                            <td><button class="del" onclick="del(${rec.id})">Delete</button></td>
+                        </tr>
+                    `).join('')}
+                </table>
+            </div>
+        `;
+    });
+}
+
+function del(id) {
+    if (confirm('Burahin ba ito?')) {
+        records = records.filter(r => r.id !== id);
+        saveAndSort();
+        renderList();
+    }
+}
+
+</script>
+
+</body>
+</html>
